@@ -24,6 +24,7 @@ var aggregateLogs = function(){
 				updateDateLog(singleLine, date);
 			}
 		}
+		console.log(aggregatedLogResults);
 	});
 }
 
@@ -34,4 +35,15 @@ var convertToArray = function(singleLine){
 		arrayOfSingleLine.push(elementsInSingleLine[count]);
 	}
 	return arrayOfSingleLine;
+}
+
+var isNewDateLog = function(date){
+	var isNewFlag = true;
+	for (count in aggregatedLogResults){
+		dateElement = aggregatedLogResults[count][0];
+		if (dateElement === date){
+			isNewFlag = false;
+		}
+	}
+	return isNewFlag;
 }
