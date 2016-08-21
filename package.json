@@ -1,0 +1,19 @@
+{
+  "name": "log-processor",
+  "version": "1.0.0",
+  "description": "Simple log aggregating tool",
+  "main": "process.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shashikhanal/log-processor.git"
+  },
+  "author": "Shashi Khanal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shashikhanal/log-processor/issues"
+  },
+  "homepage": "https://github.com/shashikhanal/log-processor#readme"
+}
