@@ -55,4 +55,17 @@ var addDateLog = function(newLog){
 	return 1;
 }
 
+var updateDateLog = function(repeatedDateLog, repeatedDate){
+	for (count in aggregatedLogResults){
+		dateFromAggregatedLogResults = aggregatedLogResults[count][0];
+		if (dateFromAggregatedLogResults === repeatedDate){
+			var warningOrError = checkWarningOrError(repeatedDateLog);
+			var warningCount = warningOrError[0], errorCount = warningOrError[1];
+			aggregatedLogResults[count][2] += warningCount;
+			aggregatedLogResults[count][4] += errorCount;
+		}
+	}
+	return 1;
+}
+
 aggregateLogs();
