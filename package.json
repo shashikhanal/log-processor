@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/shashikhanal/log-processor/issues"
   },
-  "homepage": "https://github.com/shashikhanal/log-processor#readme"
+  "homepage": "https://github.com/shashikhanal/log-processor#readme",
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
 }
