@@ -26,3 +26,12 @@ var aggregateLogs = function(){
 		}
 	});
 }
+
+var convertToArray = function(singleLine){
+	var arrayOfSingleLine = [];
+	elementsInSingleLine = singleLine.split(' ');
+	for (count = 0, length = elementsInSingleLine.length; count < length; count++){
+		arrayOfSingleLine.push(elementsInSingleLine[count]);
+	}
+	return arrayOfSingleLine;
+}
