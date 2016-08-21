@@ -48,6 +48,17 @@ var isNewDateLog = function(date){
 	return isNewFlag;
 }
 
+var checkWarningOrError = function(singleLineLog){
+	warningOrErrorValue = singleLineLog[singleLineLog.length - 1];
+	var warningCount = 0, errorCount = 0;
+	if (warningOrErrorValue === "[warning]"){
+		warningCount = 1;
+	} else {
+		errorCount = 1;
+	}
+	return [warningCount, errorCount];
+}
+
 var addDateLog = function(newLog){
 	var warningOrError = checkWarningOrError(newLog);
 	var warningCount = warningOrError[0], errorCount = warningOrError[1];
