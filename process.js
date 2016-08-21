@@ -81,6 +81,7 @@ var updateDateLog = function(repeatedDateLog, repeatedDate){
 
 module.exports = {
 	convertToArray: convertToArray,
+	checkWarningOrError: checkWarningOrError,
 }
 
 aggregateLogs();

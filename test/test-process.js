@@ -10,3 +10,21 @@ describe('convertToArray()', function(){
 		assert.deepEqual(func.convertToArray(lineOfString), [ 'This', 'is', 'a', 'line', 'of', 'strings' ]);
 	});
 });
+
+describe('checkWarningOrError()', function(){
+	it('should check if [error] present', function(){
+		var arrayOfSingleLineLog = func.convertToArray("2016-12-13 this is a log line 4 [error]");
+		var errorCount = 1;
+
+		var outcome = func.checkWarningOrError(arrayOfSingleLineLog);
+		assert.equal(outcome[1], errorCount);
+	});
+
+	it('should check if [warning] present', function(){
+		var arrayOfSingleLineLog = func.convertToArray("2016-12-14 this is a log line 6 [warning]");
+		var warningCount = 1;
+
+		var outcome = func.checkWarningOrError(arrayOfSingleLineLog);
+		assert.equal(outcome[0], warningCount);
+	});
+});
