@@ -47,3 +47,10 @@ var isNewDateLog = function(date){
 	}
 	return isNewFlag;
 }
+
+var addDateLog = function(newLog){
+	var warningOrError = checkWarningOrError(newLog);
+	var warningCount = warningOrError[0], errorCount = warningOrError[1];
+	aggregatedLogResults.push([newLog[0], 'warning:', warningCount, 'error: ', errorCount]);
+	return 1;
+}
