@@ -24,7 +24,14 @@ var aggregateLogs = function(){
 				updateDateLog(singleLine, date);
 			}
 		}
-		console.log(aggregatedLogResults);
+		for (lineCount = 0, length = aggregatedLogResults.length; lineCount < length; lineCount++){
+			for (wordCount = 0, lineLength = aggregatedLogResults[lineCount].length; wordCount < lineLength; wordCount++) {
+				process.stdout.write(aggregatedLogResults[lineCount][wordCount] + " ");
+			}
+			process.stdout.write("\n");
+		}
+		// this line if un-commented would have displayed the results in array
+		//console.log(aggregatedLogResults);
 	});
 }
 
