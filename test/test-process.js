@@ -28,3 +28,11 @@ describe('checkWarningOrError()', function(){
 		assert.equal(outcome[0], warningCount);
 	});
 });
+
+describe('addDateLog()', function(){
+	it('should add line of log from a certain day', function(){
+		var arrayOfSingleLineLog = func.convertToArray("2016-12-13 this is a log line 5 [error]");
+		var status = func.addDateLog(arrayOfSingleLineLog);
+		assert.equal(status, 1);
+	});
+});
