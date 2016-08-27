@@ -62,8 +62,11 @@ var checkWarningOrError = function(singleLineLog){
 var addDateLog = function(newLog){
 	var warningOrError = checkWarningOrError(newLog);
 	var warningCount = warningOrError[0], errorCount = warningOrError[1];
-	aggregatedLogResults.push([newLog[0], 'warning:', warningCount, 'error: ', errorCount]);
-	return 1;
+	if(aggregatedLogResults.push([newLog[0], 'warning:', warningCount, 'error: ', errorCount])){
+		return 1;
+	} else {
+		return 0;
+	}
 }
 
 var updateDateLog = function(repeatedDateLog, repeatedDate){
@@ -82,6 +85,7 @@ var updateDateLog = function(repeatedDateLog, repeatedDate){
 module.exports = {
 	convertToArray: convertToArray,
 	checkWarningOrError: checkWarningOrError,
+	addDateLog: addDateLog,
 }
 
 aggregateLogs();
