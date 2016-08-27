@@ -8,4 +8,4 @@ $ node process.js
 *Node.js should be already installed before running the above command. See [node.js](https://nodejs.org/en/download/package-manager/) for its intallation.*
 
 ## License
-[MIT](https://opensource.org/licenses/MIT)
+[MIT](https://opensource.org/licenses/MIT) License
